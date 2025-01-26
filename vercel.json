@@ -1,36 +1,30 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "app.js",
-        "use": "@vercel/node"
-      },
-      {
-        "src": "public/**/*",
-        "use": "@vercel/static"
-      }
-    ],
-    "routes": [
-      {
-        "src": "/api/(.*)",
-        "dest": "/app.js"
-      },
-      {
-        "src": "/css/(.*)",
-        "dest": "/public/css/$1"
-      },
-      {
-        "src": "/js/(.*)",
-        "dest": "/public/js/$1"
-      },
-      {
-        "src": "/php/(.*)",
-        "dest": "/public/php/$1"
-      },
-      {
-        "src": "/(.*)",
-        "dest": "/public/$1"
-      }
-    ]
+  "version": 2,
+  "builds": [
+    {
+      "src": "app.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "public/**/*",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/app.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/public/index.html"
+    }
+  ],
+  "env": {
+    "MONGO_URI": "mongodb+srv://sneha:6GITLMiezPpmXEew@cluster0.zdphu.mongodb.net/profileDB?retryWrites=true&w=majority&appName=Cluster0",
+    "SESSION_SECRET": "my_super_secure_session_secret_123!",
+    "REDIS_HOST": "localhost",
+    "REDIS_PORT": "6379",
+    "NODE_ENV": "production"
   }
-  
+}
