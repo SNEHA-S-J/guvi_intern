@@ -1,27 +1,12 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "index.js",
-      "use": "@vercel/node"
-    }
+  "rewrites": [
+    { "source": "/", "destination": "/index.html" },
+    { "source": "/login", "destination": "/public/login.html" },
+    { "source": "/profile", "destination": "/public/profile.html" },
+    { "source": "/register", "destination": "/public/register.html" }
   ],
-  "routes": [
-    {
-      "src": "/register",
-      "dest": "/api/register"
-    },
-    {
-      "src": "/login",
-      "dest": "/api/login"
-    },
-    {
-      "src": "/profile",
-      "dest": "/profile.html"
-    },
-    {
-      "src": "/",
-      "dest": "/index.html"
-    }
-  ]
+  "staticFiles": {
+    "source": "/css",
+    "destination": "/css"
+  }
 }
