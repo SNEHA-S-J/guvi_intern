@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "app.js",
+      "src": "*.js",
       "use": "@vercel/node"
     },
     {
@@ -19,12 +19,5 @@
       "src": "/(.*)",
       "dest": "/public/index.html"
     }
-  ],
-  "env": {
-    "MONGO_URI": "mongodb+srv://sneha:6GITLMiezPpmXEew@cluster0.zdphu.mongodb.net/profileDB?retryWrites=true&w=majority&appName=Cluster0",
-    "SESSION_SECRET": "my_super_secure_session_secret_123!",
-    "REDIS_HOST": "localhost",
-    "REDIS_PORT": "6379",
-    "NODE_ENV": "production"
-  }
+  ]
 }
