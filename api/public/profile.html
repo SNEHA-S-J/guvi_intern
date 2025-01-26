@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile</title>
+  <link rel="stylesheet" href="/css/style.css"> <!-- Ensure the path to your CSS file is correct -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="./js/profile.js" defer></script> <!-- Use 'defer' to load the script after the HTML -->
+</head>
+<body>
+  <div id="profile-container">
+    <h1>Welcome, <span id="username">Loading...</span></h1>
+    <p>Email: <span id="email"></span></p>
+  </div>
+  <div id="error-message" style="color: red; display: none;">
+    An error occurred. Redirecting to the login page...
+  </div>
+</body>
+</html>

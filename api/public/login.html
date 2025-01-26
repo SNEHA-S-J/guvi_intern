@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Include jQuery before your script file -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./js/login.js"></script>  <!-- Your login.js file -->
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <p>Login to Your Account</p>
+            <form id="loginForm">
+                <input type="email" id="email" placeholder="Email" required><br>
+                <input type="password" id="password" placeholder="Password" required><br>
+                <button type="submit">Login</button>
+            </form>
+            <a href="/register">
+                <button>Register</button>
+            </a>
+            <a href="/"><button type="button" class="back-button">Back</button></a>
+            <p id="check"></p> <!-- For feedback messages -->
+        </div>
+    </div>
+</body>
+</html>

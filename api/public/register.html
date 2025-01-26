@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery CDN -->
+    <script src="./js/register.js" defer></script> <!-- Ensure register.js handles form submission -->
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <p>Register for a New Account</p>
+            <form id="registerForm">
+                <input type="text" id="username" name="username" placeholder="Username" required><br>
+                <input type="password" id="password" name="password" placeholder="Password" required><br>
+                <input type="email" id="email" name="email" placeholder="Email" required><br>
+                <button type="submit">Register</button>
+            </form>
+            <!-- Back button -->
+            <a href="/"><button type="button" class="back-button">Back</button></a>
+            <!-- Login button, without button tag inside anchor -->
+            <a href="/login">
+                <button>Login</button>
+            </a>
+            <p id="check"></p> <!-- For feedback messages -->
+        </div>
+    </div>
+</body>
+</html>
